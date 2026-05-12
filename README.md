@@ -27,7 +27,7 @@
 <img width="378" height="721" alt="Panel" src="https://github.com/user-attachments/assets/a35c0d81-9c81-4d3e-ac70-fb6a905c3837" />
 
 ## 材質轉換
-- 除Glass等特殊材質外，盡量使用USD Preview Surface，以確保材質在Blender與Omniverse之間能夠正確轉換
+- 在Omniverse中，除Glass等特殊材質外，盡量使用USD Preview Surface，以確保材質在Blender與Omniverse之間能夠正確轉換
 - 在Omniverse中，若使用omniPBR(MDL shader language)，輸出後Blender會無法正常讀取
 - 在Omniverse中，若使用USD Preview Surface或USD Preview Surface Texture，Blender可以正常讀取
 - 在Blender中，輸出USD時會默認使用USD Preview Surface，Omniverse能夠正常讀取
