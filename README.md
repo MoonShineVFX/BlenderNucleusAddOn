@@ -1,9 +1,9 @@
 # Nucleus Connector
 **測試版本**: Blender 5.1
 
-透過Nucleus Connector，Blender可以直接讀取/編輯/儲存位於Nucleus Server上的檔案。無須手動下載再上傳檔案至Server，並確保Blender與Omniverse的材質與貼圖保持一致。
+透過Nucleus Connector，Blender可直接讀取/編輯/儲存位於Nucleus Server上的檔案。無須手動下載再上傳檔案至Server，同時確保Blender與Omniverse的材質與貼圖保持一致。
 
-架構上是以embed python3.11跑Precompiled的Omniverse Blender Branch Binary(可與Nucleus Server構通的library)，Blender5.1的python3.13再與embed python3.11溝通，傳遞指令。
+架構上是以embed python3.11跑Precompiled的Omniverse Blender Branch Binary library(非開源，可與Nucleus Server溝通)。Blender5.1的python3.13再與embed python3.11傳遞指令。
 
 
 ## 安裝
@@ -25,6 +25,14 @@
 - **Checkpoint (8)(optonal)** : 將檔案推回server時，提交修改的comment
 
 <img width="378" height="721" alt="Panel" src="https://github.com/user-attachments/assets/a35c0d81-9c81-4d3e-ac70-fb6a905c3837" />
+
+## 材質轉換
+- 除Glass等特殊材質外，盡量使用USD Preview Surface，以確保材質在Blender與Omniverse之間能夠正確轉換
+- 在Omniverse中，若使用omniPBR(MDL shader language)，輸出後Blender會無法正常讀取
+- 在Omniverse中，若使用USD Preview Surface或USD Preview Surface Texture，Blender可以正常讀取
+- 在Blender中，輸出USD時會默認使用USD Preview Surface，Omniverse能夠正常讀取
+<img width="960" height="525" alt="materials-usdpreviewsurface-graph" src="https://github.com/user-attachments/assets/c9d08b1c-def3-4298-bbf8-fc35fd635f55" />
+
 
 ## Tips
 - 一次只能開啟一個主要的USD檔案(與Omniverse相同)。載入另一個USD檔時，Add On會提示是否儲存，並重新載入新檔案
