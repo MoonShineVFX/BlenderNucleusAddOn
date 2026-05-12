@@ -1,0 +1,198 @@
+2026-04-30 16:06:46 INFO    [sidecar] sidecar starting (pid=6852, host=127.0.0.1, port=0)
+2026-04-30 16:06:46 INFO    [sidecar] listening on 127.0.0.1:64212
+2026-04-30 16:06:46 INFO    [sidecar] client connected ('127.0.0.1', 64213)
+2026-04-30 16:06:46 DEBUG   [sidecar] [omni:INFO] core: Initializing Version 2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:06:46 DEBUG   [sidecar] [omni:INFO] core: Client ID: 6W9QE0YV
+2026-04-30 16:06:46 INFO    [sidecar] omni.client initialized, version=2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:06:46 DEBUG   [sidecar] [omni:INFO] core: Not using Hub: Hub not found
+2026-04-30 16:06:46 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Initialized Nucleus API v11.20-7881ce72
+2026-04-30 16:06:46 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTING'}
+2026-04-30 16:06:47 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Refreshing cached access token for omniverse://nucleus.moonshine.tw
+2026-04-30 16:06:47 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Auth: Refreshed tokens for "tim"
+2026-04-30 16:06:48 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server is running version 1.14.53+tag-1.14.53.gitlab.29029136.7881ce72
+2026-04-30 16:06:48 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports atomic checkpoints
+2026-04-30 16:06:48 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports checkpoints and it is enabled
+2026-04-30 16:06:48 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTED'}
+2026-04-30 16:06:48 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports omni-objects and it is enabled
+2026-04-30 16:06:48 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connected to omniverse://nucleus.moonshine.tw
+2026-04-30 16:06:48 INFO    [sidecar] shutdown requested via RPC
+2026-04-30 16:06:48 INFO    [sidecar] server stopping
+2026-04-30 16:06:48 INFO    [sidecar] omni.client.shutdown() OK
+2026-04-30 16:06:48 INFO    [sidecar] client disconnected ('127.0.0.1', 64213)
+2026-04-30 16:07:35 INFO    [sidecar] sidecar starting (pid=21084, host=127.0.0.1, port=0)
+2026-04-30 16:07:35 INFO    [sidecar] listening on 127.0.0.1:59412
+2026-04-30 16:07:35 INFO    [sidecar] client connected ('127.0.0.1', 59413)
+2026-04-30 16:07:35 DEBUG   [sidecar] [omni:INFO] core: Initializing Version 2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:07:35 DEBUG   [sidecar] [omni:INFO] core: Client ID: LSZ5AMTE
+2026-04-30 16:07:35 DEBUG   [sidecar] [omni:INFO] core: Not using Hub: Hub not found
+2026-04-30 16:07:35 INFO    [sidecar] omni.client initialized, version=2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:07:35 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Initialized Nucleus API v11.20-7881ce72
+2026-04-30 16:07:35 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTING'}
+2026-04-30 16:07:35 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Refreshing cached access token for omniverse://nucleus.moonshine.tw
+2026-04-30 16:07:36 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Auth: Refreshed tokens for "tim"
+2026-04-30 16:07:36 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server is running version 1.14.53+tag-1.14.53.gitlab.29029136.7881ce72
+2026-04-30 16:07:36 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports atomic checkpoints
+2026-04-30 16:07:36 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports omni-objects and it is enabled
+2026-04-30 16:07:36 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTED'}
+2026-04-30 16:07:36 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports checkpoints and it is enabled
+2026-04-30 16:07:36 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connected to omniverse://nucleus.moonshine.tw
+2026-04-30 16:07:36 INFO    [sidecar] shutdown requested via RPC
+2026-04-30 16:07:36 INFO    [sidecar] server stopping
+2026-04-30 16:07:36 INFO    [sidecar] omni.client.shutdown() OK
+2026-04-30 16:07:36 INFO    [sidecar] client disconnected ('127.0.0.1', 59413)
+2026-04-30 16:07:36 INFO    [sidecar] exiting with code 0
+2026-04-30 16:07:55 INFO    [sidecar] sidecar starting (pid=22292, host=127.0.0.1, port=0)
+2026-04-30 16:07:55 INFO    [sidecar] listening on 127.0.0.1:59427
+2026-04-30 16:07:55 INFO    [sidecar] client connected ('127.0.0.1', 59428)
+2026-04-30 16:07:55 DEBUG   [sidecar] [omni:INFO] core: Initializing Version 2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:07:55 DEBUG   [sidecar] [omni:INFO] core: Client ID: FS0IWW46
+2026-04-30 16:07:55 INFO    [sidecar] omni.client initialized, version=2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:07:55 DEBUG   [sidecar] [omni:INFO] core: Not using Hub: Hub not found
+2026-04-30 16:07:55 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Initialized Nucleus API v11.20-7881ce72
+2026-04-30 16:07:55 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTING'}
+2026-04-30 16:07:56 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Refreshing cached access token for omniverse://nucleus.moonshine.tw
+2026-04-30 16:07:56 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Auth: Refreshed tokens for "tim"
+2026-04-30 16:07:57 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server is running version 1.14.53+tag-1.14.53.gitlab.29029136.7881ce72
+2026-04-30 16:07:57 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports atomic checkpoints
+2026-04-30 16:07:57 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports checkpoints and it is enabled
+2026-04-30 16:07:57 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTED'}
+2026-04-30 16:07:57 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports omni-objects and it is enabled
+2026-04-30 16:07:57 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connected to omniverse://nucleus.moonshine.tw
+2026-04-30 16:07:57 INFO    [sidecar] shutdown requested via RPC
+2026-04-30 16:07:57 INFO    [sidecar] server stopping
+2026-04-30 16:07:57 INFO    [sidecar] omni.client.shutdown() OK
+2026-04-30 16:07:57 INFO    [sidecar] client disconnected ('127.0.0.1', 59428)
+2026-04-30 16:07:57 INFO    [sidecar] exiting with code 0
+2026-04-30 16:14:06 INFO    [sidecar] sidecar starting (pid=18336, host=127.0.0.1, port=0)
+2026-04-30 16:14:06 INFO    [sidecar] listening on 127.0.0.1:49433
+2026-04-30 16:14:06 INFO    [sidecar] client connected ('127.0.0.1', 49434)
+2026-04-30 16:14:07 DEBUG   [sidecar] [omni:INFO] core: Initializing Version 2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:14:07 DEBUG   [sidecar] [omni:INFO] core: Client ID: OXP78UYX
+2026-04-30 16:14:07 INFO    [sidecar] omni.client initialized, version=2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:14:07 DEBUG   [sidecar] [omni:INFO] core: Not using Hub: Hub not found
+2026-04-30 16:14:07 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Initialized Nucleus API v11.20-7881ce72
+2026-04-30 16:14:07 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTING'}
+2026-04-30 16:14:07 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Refreshing cached access token for omniverse://nucleus.moonshine.tw
+2026-04-30 16:14:07 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Auth: Refreshed tokens for "tim"
+2026-04-30 16:14:07 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server is running version 1.14.53+tag-1.14.53.gitlab.29029136.7881ce72
+2026-04-30 16:14:07 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports atomic checkpoints
+2026-04-30 16:14:07 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports omni-objects and it is enabled
+2026-04-30 16:14:07 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTED'}
+2026-04-30 16:14:07 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports checkpoints and it is enabled
+2026-04-30 16:14:07 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connected to omniverse://nucleus.moonshine.tw
+2026-04-30 16:14:08 INFO    [sidecar] client disconnected ('127.0.0.1', 49434)
+2026-04-30 16:14:13 INFO    [sidecar] stdin EOF — requesting shutdown
+2026-04-30 16:14:13 INFO    [sidecar] server stopping
+2026-04-30 16:14:13 INFO    [sidecar] omni.client.shutdown() OK
+2026-04-30 16:14:13 INFO    [sidecar] exiting with code 0
+2026-04-30 16:14:47 INFO    [sidecar] sidecar starting (pid=20060, host=127.0.0.1, port=0)
+2026-04-30 16:14:47 INFO    [sidecar] listening on 127.0.0.1:49480
+2026-04-30 16:14:47 INFO    [sidecar] client connected ('127.0.0.1', 49481)
+2026-04-30 16:14:47 DEBUG   [sidecar] [omni:INFO] core: Initializing Version 2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:14:47 DEBUG   [sidecar] [omni:INFO] core: Client ID: 659VHIVK
+2026-04-30 16:14:47 DEBUG   [sidecar] [omni:INFO] core: Not using Hub: Hub not found
+2026-04-30 16:14:47 INFO    [sidecar] omni.client initialized, version=2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:14:47 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Initialized Nucleus API v11.20-7881ce72
+2026-04-30 16:14:47 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTING'}
+2026-04-30 16:14:47 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Refreshing cached access token for omniverse://nucleus.moonshine.tw
+2026-04-30 16:14:47 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Auth: Refreshed tokens for "tim"
+2026-04-30 16:14:47 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server is running version 1.14.53+tag-1.14.53.gitlab.29029136.7881ce72
+2026-04-30 16:14:47 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports atomic checkpoints
+2026-04-30 16:14:47 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports checkpoints and it is enabled
+2026-04-30 16:14:47 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports omni-objects and it is enabled
+2026-04-30 16:14:47 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTED'}
+2026-04-30 16:14:47 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connected to omniverse://nucleus.moonshine.tw
+2026-04-30 16:14:48 INFO    [sidecar] shutdown requested via RPC
+2026-04-30 16:14:48 INFO    [sidecar] server stopping
+2026-04-30 16:14:48 INFO    [sidecar] omni.client.shutdown() OK
+2026-04-30 16:14:48 INFO    [sidecar] client disconnected ('127.0.0.1', 49481)
+2026-04-30 16:14:48 INFO    [sidecar] exiting with code 0
+2026-04-30 16:18:21 INFO    [sidecar] sidecar starting (pid=16924, host=127.0.0.1, port=0, omni_source=bundled)
+2026-04-30 16:18:21 INFO    [sidecar] listening on 127.0.0.1:61610
+2026-04-30 16:18:21 INFO    [sidecar] client connected ('127.0.0.1', 61611)
+2026-04-30 16:18:21 DEBUG   [sidecar] [omni:INFO] core: Initializing Version 2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:18:21 DEBUG   [sidecar] [omni:INFO] core: Client ID: AZ44Z5NV
+2026-04-30 16:18:21 DEBUG   [sidecar] [omni:INFO] core: Not using Hub: Hub not found
+2026-04-30 16:18:21 INFO    [sidecar] omni.client initialized, version=2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:18:21 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Initialized Nucleus API v11.20-7881ce72
+2026-04-30 16:18:21 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTING'}
+2026-04-30 16:18:21 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Refreshing cached access token for omniverse://nucleus.moonshine.tw
+2026-04-30 16:18:22 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Auth: Refreshed tokens for "tim"
+2026-04-30 16:18:22 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server is running version 1.14.53+tag-1.14.53.gitlab.29029136.7881ce72
+2026-04-30 16:18:22 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports atomic checkpoints
+2026-04-30 16:18:22 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports checkpoints and it is enabled
+2026-04-30 16:18:22 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTED'}
+2026-04-30 16:18:22 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports omni-objects and it is enabled
+2026-04-30 16:18:22 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connected to omniverse://nucleus.moonshine.tw
+2026-04-30 16:18:22 INFO    [sidecar] shutdown requested via RPC
+2026-04-30 16:18:22 INFO    [sidecar] server stopping
+2026-04-30 16:18:22 INFO    [sidecar] omni.client.shutdown() OK
+2026-04-30 16:18:22 INFO    [sidecar] client disconnected ('127.0.0.1', 61611)
+2026-04-30 16:18:22 INFO    [sidecar] exiting with code 0
+2026-04-30 16:18:36 INFO    [sidecar] sidecar starting (pid=2188, host=127.0.0.1, port=0, omni_source=bundled)
+2026-04-30 16:18:36 INFO    [sidecar] listening on 127.0.0.1:50929
+2026-04-30 16:18:36 INFO    [sidecar] client connected ('127.0.0.1', 50930)
+2026-04-30 16:18:36 DEBUG   [sidecar] [omni:INFO] core: Initializing Version 2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:18:36 DEBUG   [sidecar] [omni:INFO] core: Client ID: QKOA089G
+2026-04-30 16:18:36 DEBUG   [sidecar] [omni:INFO] core: Not using Hub: Hub not found
+2026-04-30 16:18:36 INFO    [sidecar] omni.client initialized, version=2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:18:36 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Initialized Nucleus API v11.20-7881ce72
+2026-04-30 16:18:36 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTING'}
+2026-04-30 16:18:36 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Refreshing cached access token for omniverse://nucleus.moonshine.tw
+2026-04-30 16:18:37 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Auth: Refreshed tokens for "tim"
+2026-04-30 16:18:37 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server is running version 1.14.53+tag-1.14.53.gitlab.29029136.7881ce72
+2026-04-30 16:18:37 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports atomic checkpoints
+2026-04-30 16:18:37 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports checkpoints and it is enabled
+2026-04-30 16:18:37 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTED'}
+2026-04-30 16:18:37 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports omni-objects and it is enabled
+2026-04-30 16:18:37 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connected to omniverse://nucleus.moonshine.tw
+2026-04-30 16:18:39 INFO    [sidecar] shutdown requested via RPC
+2026-04-30 16:18:39 INFO    [sidecar] server stopping
+2026-04-30 16:18:39 INFO    [sidecar] omni.client.shutdown() OK
+2026-04-30 16:18:39 INFO    [sidecar] client disconnected ('127.0.0.1', 50930)
+2026-04-30 16:18:39 INFO    [sidecar] exiting with code 0
+2026-04-30 16:26:50 INFO    [sidecar] sidecar starting (pid=5912, host=127.0.0.1, port=0, omni_source=bundled)
+2026-04-30 16:26:50 INFO    [sidecar] listening on 127.0.0.1:52656
+2026-04-30 16:26:50 INFO    [sidecar] client connected ('127.0.0.1', 52657)
+2026-04-30 16:26:50 DEBUG   [sidecar] [omni:INFO] core: Initializing Version 2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:26:50 DEBUG   [sidecar] [omni:INFO] core: Client ID: 1ASLY5XU
+2026-04-30 16:26:50 DEBUG   [sidecar] [omni:INFO] core: Not using Hub: Hub not found
+2026-04-30 16:26:50 INFO    [sidecar] omni.client initialized, version=2.68.1-release.6529+gl.16a8dde1
+2026-04-30 16:26:50 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Initialized Nucleus API v11.20-7881ce72
+2026-04-30 16:26:50 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTING'}
+2026-04-30 16:26:50 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Refreshing cached access token for omniverse://nucleus.moonshine.tw
+2026-04-30 16:26:51 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Auth: Refreshed tokens for "tim"
+2026-04-30 16:26:51 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server is running version 1.14.53+tag-1.14.53.gitlab.29029136.7881ce72
+2026-04-30 16:26:51 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports atomic checkpoints
+2026-04-30 16:26:51 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports omni-objects and it is enabled
+2026-04-30 16:26:51 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Server omniverse://nucleus.moonshine.tw supports checkpoints and it is enabled
+2026-04-30 16:26:51 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nucleus.moonshine.tw', 'status': 'CONNECTED'}
+2026-04-30 16:26:51 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connected to omniverse://nucleus.moonshine.tw
+2026-04-30 16:26:52 DEBUG   [sidecar] connection_status: {'server': 'omniverse://nonexistent.invalid', 'status': 'CONNECTING'}
+2026-04-30 16:26:52 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connection to omniverse://nonexistent.invalid failed: Could not create a connection
+2026-04-30 16:26:52 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Will attempt to reconnect in 105 milliseconds
+2026-04-30 16:26:52 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connection to omniverse://nonexistent.invalid failed: Could not create a connection
+2026-04-30 16:26:52 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Will attempt to reconnect in 516 milliseconds
+2026-04-30 16:26:52 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connection to omniverse://nonexistent.invalid failed: Could not create a connection
+2026-04-30 16:26:52 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Will attempt to reconnect in 1022 milliseconds
+2026-04-30 16:26:53 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connection to omniverse://nonexistent.invalid failed: Could not create a connection
+2026-04-30 16:26:53 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Will attempt to reconnect in 1777 milliseconds
+2026-04-30 16:26:55 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connection to omniverse://nonexistent.invalid failed: Could not create a connection
+2026-04-30 16:26:55 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Will attempt to reconnect in 2830 milliseconds
+2026-04-30 16:26:58 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connection to omniverse://nonexistent.invalid failed: Could not create a connection
+2026-04-30 16:26:58 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Will attempt to reconnect in 4103 milliseconds
+2026-04-30 16:27:02 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connection to omniverse://nonexistent.invalid failed: Could not create a connection
+2026-04-30 16:27:02 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Will attempt to reconnect in 5167 milliseconds
+2026-04-30 16:27:07 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connection to omniverse://nonexistent.invalid failed: Could not create a connection
+2026-04-30 16:27:07 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Will attempt to reconnect in 7080 milliseconds
+2026-04-30 16:27:14 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Connection to omniverse://nonexistent.invalid failed: Could not create a connection
+2026-04-30 16:27:14 DEBUG   [sidecar] [omni:INFO] provider_nucleus: Will attempt to reconnect in 8445 milliseconds
+2026-04-30 16:27:22 INFO    [sidecar] shutdown requested via RPC
+2026-04-30 16:27:22 INFO    [sidecar] server stopping
+2026-04-30 16:27:22 INFO    [sidecar] stdin EOF — requesting shutdown
+2026-04-30 16:27:22 INFO    [sidecar] omni.client.shutdown() OK
+2026-04-30 16:27:22 INFO    [sidecar] client disconnected ('127.0.0.1', 52657)
+2026-04-30 16:27:22 DEBUG   [sidecar] [omni:WARNING] core: Core::stop called after shutdown
+2026-04-30 16:27:22 INFO    [sidecar] exiting with code 0
+2026-05-05 16:21:54 INFO    [sidecar] sidecar starting (pid=13812, host=127.0.0.1, port=0, omni_source=bundled)
+2026-05-05 16:21:54 INFO    [sidecar] listening on 127.0.0.1:52639
