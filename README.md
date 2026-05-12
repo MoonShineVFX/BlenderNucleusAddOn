@@ -3,7 +3,7 @@
 
 透過Nucleus Connector，Blender可直接讀取/編輯/儲存位於Nucleus Server上的檔案。無須手動下載再上傳檔案至Server，同時確保Blender與Omniverse的貼圖、材質保持一致。
 
-架構上是以embed python3.11跑Precompiled的Omniverse Blender Branch Binary library(非開源，可與Nucleus Server溝通)。Blender5.1的python3.13再與embed python3.11傳遞指令。
+架構上是以embed python3.11跑Omniverse Blender Branch Binary library(非開源，Precompiled，可與Nucleus Server溝通)。Blender5.1的python3.13再與embed python3.11傳遞指令。
 
 
 ## 安裝
