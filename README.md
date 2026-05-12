@@ -10,7 +10,7 @@
 
 
 
-## 使用教學
+## 使用
 - **Connections (1)**: 點選加號新增Nucleus Server路徑 (ex: omniverse://nucleus.moonshine.tw/)
 - **Bookmarks (2)** : 儲存Blender檔後，可自動儲存Nucleus Server位址
 - **Directory (3)** : 瀏覽Nucleus Server上的資料夾
