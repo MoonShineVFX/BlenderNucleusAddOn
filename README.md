@@ -1,6 +1,10 @@
 # Nucleus Connector
-講一下這個Add On是在幹嘛
-之所以叫做sidecar的原因
+**測試版本**: Blender 5.1
+
+透過Nucleus Connector，Blender可以直接讀取/編輯/儲存位於Nucleus Server上的檔案。無須手動下載再上傳檔案至Server，並確保Blender與Omniverse的材質與貼圖保持一致。
+
+架構上是以embed python3.11跑Precompiled的Omniverse Blender Branch Binary(可與Nucleus Server構通的library)，Blender5.1的python3.13再與embed python3.11溝通，傳遞指令。
+
 
 ## 安裝
 - 將整個資料夾"blender_nucleus_addon"放置於Blender默認的Add On資料夾下 (ex: C:\Users\MyUserName\AppData\Roaming\Blender Foundation\Blender\5.1\scripts\addons, 替換MyUserName)
@@ -22,4 +26,10 @@
 
 <img width="378" height="721" alt="Panel" src="https://github.com/user-attachments/assets/a35c0d81-9c81-4d3e-ac70-fb6a905c3837" />
 
-
+## Tips
+- 一次只能開啟一個主要的USD檔案(與Omniverse相同)。載入另一個USD檔時，Add On會提示是否儲存，並重新載入新檔案
+- 不建議直接編輯檔案大小很大的場景，網路傳輸會很久。以修改檔案大小較小的USD檔為主
+- 目前的機制是按下Open後，所有的貼圖跟模型都會被存到local cache，關閉Blender或開啟新USD後，Cache會被釋放
+- 有修改的貼圖，Save時才會上傳server，未修改的貼圖不會重複上傳
+- 在已存在的USD檔中新增貼圖，Save時該貼圖也會被上傳至Server
+- Login機制由Nucleus server處理，與Add On無關
