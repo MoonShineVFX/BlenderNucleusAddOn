@@ -1,0 +1,2 @@
+# BlenderOVConnector
+Blender直接讀取或編輯儲存於Nucleus Server的檔案
