@@ -86,6 +86,7 @@ class OMNI_PT_BrowserPanel(bpy.types.Panel):
         )
         row = col.row(align=True)
         row.operator("omni.add_bookmark", text="", icon="BOOKMARKS")
+        row.operator("omni.remove_bookmark", text="", icon="X")
 
         col.separator()
         col.label(text="Directory:")

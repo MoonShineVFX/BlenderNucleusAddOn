@@ -17,6 +17,7 @@ from .operators import (
     OMNI_OT_OpenConnection,
     OMNI_OT_OpenParentDirectory,
     OMNI_OT_RefreshDirectory,
+    OMNI_OT_RemoveBookmark,
     OMNI_OT_RestartSidecar,
 )
 from .preferences import NucleusConnectionPreferences, get_bookmarks
@@ -52,6 +53,7 @@ classes = (
     OMNI_OT_OpenParentDirectory,
     OMNI_OT_CreateDirectory,
     OMNI_OT_AddBookmark,
+    OMNI_OT_RemoveBookmark,
     OMNI_OT_ClearConnectionStatus,
     OMNI_OT_AuthPrompt,
     OMNI_OT_ImportUSD,

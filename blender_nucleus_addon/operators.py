@@ -11,7 +11,8 @@ import bpy
 from bpy.props import BoolProperty, EnumProperty, IntProperty, StringProperty
 from bpy.types import Operator
 
-from .preferences import add_bookmark, get_bookmarks
+from .preferences import add_bookmark, get_bookmarks, remove_bookmark
+from . import event_handlers
 from .rpc_client import get_client, RpcError
 from .browser import init_connection_list, init_location_list, populate_file_list
 from . import usd_deps
@@ -220,6 +221,27 @@ class OMNI_OT_AddBookmark(Operator):
             init_location_list(context, get_bookmarks(context), [])
         else:
             self.report({"WARNING"}, f"Already bookmarked: {target}")
+        return {"FINISHED"}
+
+
+class OMNI_OT_RemoveBookmark(Operator):
+    """Remove the selected bookmark from the Bookmarks list."""
+    bl_idname = "omni.remove_bookmark"
+    bl_label = "Remove Bookmark"
+
+    @classmethod
+    def poll(cls, context):
+        settings = _settings(context)
+        return (0 <= settings.location_list_index < len(settings.location_list))
+
+    def execute(self, context):
+        settings = _settings(context)
+        target = settings.location_list[settings.location_list_index].name
+        if not remove_bookmark(context, target):
+            self.report({"WARNING"}, f"Not a saved bookmark: {target}")
+            return {"CANCELLED"}
+        self.report({"INFO"}, f"Removed bookmark {target}")
+        init_location_list(context, get_bookmarks(context), event_handlers.g_open_servers)
         return {"FINISHED"}
 
 

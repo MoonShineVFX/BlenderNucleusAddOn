@@ -63,3 +63,24 @@ def add_bookmark(context, new_bookmark: str) -> bool:
         print(f"[bna] failed to add bookmark: {exc}")
         return False
     return True
+
+
+def remove_bookmark(context, target: str) -> bool:
+    """Remove a bookmark from the preferences string. Returns False if the
+    bookmark was not found or on error."""
+    if not target:
+        return False
+    target = target.strip(' "\'').rstrip("/")
+    try:
+        prefs = context.preferences.addons[__package__].preferences
+        raw = prefs.nucleus_bookmarks or ""
+        items = shlex.split(raw)
+        kept = [item for item in items if item.rstrip("/") != target]
+        if len(kept) == len(items):
+            return False
+        prefs.nucleus_bookmarks = " ".join(f'"{item}"' for item in kept)
+        context.preferences.use_preferences_save = True
+    except Exception as exc:
+        print(f"[bna] failed to remove bookmark: {exc}")
+        return False
+    return True
