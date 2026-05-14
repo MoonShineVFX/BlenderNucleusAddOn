@@ -23,7 +23,8 @@
 - **Save As (7)** : 將USD檔另存至Server的其他位址
 - **Checkpoint (8)(optional)** : 將檔案推回server時，提交修改的comment
 
-<img width="378" height="721" alt="Panel" src="https://github.com/user-attachments/assets/a35c0d81-9c81-4d3e-ac70-fb6a905c3837" />
+<img width="378" height="721" alt="Panel" src="https://github.com/user-attachments/assets/ab76ca1e-e42c-4eaf-9905-914615956a11" />
+
 
 ## 材質轉換
 > 在Omniverse中，除Glass等特殊材質外，盡量使用***USD Preview Surface***，以確保材質在Blender與Omniverse之間能夠正確轉換
