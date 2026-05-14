@@ -570,6 +570,12 @@ class OMNI_OT_ExportUSD(Operator):
     # source_url stashed on the scene. Cleared by the "Save As…" button so
     # the URL prompt always shows.
     use_source_url: BoolProperty(default=True, options={"HIDDEN", "SKIP_SAVE"})
+    # When True, pass texture-export options to wm.usd_export so the user's
+    # local textures get copied alongside the .usd into the cache mirror,
+    # where the dep-walk + upload loop below can find them. Used by the
+    # "New" button — round-trip Save/Save-As keeps the default False because
+    # the textures are already in the cache mirror from the prior Open.
+    is_new_file: BoolProperty(default=False, options={"HIDDEN", "SKIP_SAVE"})
 
     @classmethod
     def poll(cls, context):
@@ -626,7 +632,27 @@ class OMNI_OT_ExportUSD(Operator):
         manifest = usd_deps.load_manifest(url) or usd_deps.Manifest(root_url=url)
 
         try:
-            bpy.ops.wm.usd_export(filepath=str(local_main))
+            export_kwargs = {"filepath": str(local_main)}
+            if self.is_new_file:
+                # Copy textures next to the .usd in the cache mirror so the
+                # dep-walk below picks them up via local_path_to_url().
+                # Without these flags, brand-new exports skip textures
+                # (they live on the user's disk, not under the cache mirror).
+                # Filter by what this Blender's usd_export actually supports —
+                # older builds lack export_textures/overwrite_textures, and
+                # we'd rather upload a textureless USD than fail outright.
+                try:
+                    supported = set(bpy.ops.wm.usd_export.get_rna_type().properties.keys())
+                except Exception:
+                    supported = set()
+                for opt, val in (
+                    ("export_textures", True),
+                    ("overwrite_textures", True),
+                    ("relative_paths", True),
+                ):
+                    if opt in supported:
+                        export_kwargs[opt] = val
+            bpy.ops.wm.usd_export(**export_kwargs)
         except Exception as exc:
             self.report({"ERROR"}, f"usd_export failed: {exc}")
             return {"CANCELLED"}
@@ -838,6 +864,129 @@ class OMNI_OT_ExportUSD(Operator):
             except Exception as exc:
                 print(f"[bna] chained Open failed: {exc!r}")
         return status
+
+
+_USD_FILE_EXTS = (".usd", ".usda", ".usdc", ".usdz")
+
+
+def _file_exists_on_server(folder_url: str, filename: str) -> bool:
+    """List the server folder and return True iff filename is present as a file."""
+    folder = folder_url if folder_url.endswith("/") else folder_url + "/"
+    client = get_client()
+    client.call_blocking("initialize")
+    result = client.call_blocking("list", url=folder, timeout=20.0)
+    for entry in result.get("entries", []):
+        if entry.get("is_dir"):
+            continue
+        if entry.get("relative_path") == filename:
+            return True
+    return False
+
+
+def _kick_off_new_upload(op, target_url: str):
+    try:
+        bpy.ops.omni.export_usd(
+            "EXEC_DEFAULT",
+            target_url=target_url,
+            use_source_url=False,
+            is_new_file=True,
+        )
+    except Exception as exc:
+        op.report({"ERROR"}, f"could not start upload: {exc}")
+        return {"CANCELLED"}
+    return {"FINISHED"}
+
+
+class OMNI_OT_NewFile(Operator):
+    """Save the current Blender scene as a new USD file in the selected Nucleus folder."""
+    bl_idname = "omni.new_file"
+    bl_label = "New File on Nucleus"
+
+    filename: StringProperty(
+        name="File Name",
+        description="USD file name to create in the current directory",
+        default="untitled.usd",
+    )
+
+    @classmethod
+    def poll(cls, context):
+        s = _settings(context)
+        if s.transfer_active:
+            return False
+        d = (s.directory or "").strip()
+        return d.startswith("omniverse://")
+
+    def invoke(self, context, event):
+        return context.window_manager.invoke_props_dialog(self, width=440)
+
+    def draw(self, context):
+        s = _settings(context)
+        col = self.layout.column()
+        col.label(text="Target folder:", icon="FILE_FOLDER")
+        col.label(text=f"   {s.directory}")
+        col.separator()
+        col.label(text="New USD file name:")
+        col.prop(self, "filename", text="")
+
+    def execute(self, context):
+        s = _settings(context)
+        directory = (s.directory or "").strip()
+        if not directory.startswith("omniverse://"):
+            self.report({"ERROR"}, "Directory must be an omniverse:// URL")
+            return {"CANCELLED"}
+
+        name = self.filename.strip().strip("/\\")
+        if not name:
+            self.report({"ERROR"}, "File name is empty")
+            return {"CANCELLED"}
+        if "/" in name or "\\" in name:
+            self.report({"ERROR"}, "File name may not contain slashes")
+            return {"CANCELLED"}
+        if not name.lower().endswith(_USD_FILE_EXTS):
+            name = name + ".usd"
+
+        target_url = directory.rstrip("/") + "/" + name
+
+        try:
+            collision = _file_exists_on_server(directory, name)
+        except (RpcError, TimeoutError) as exc:
+            self.report({"ERROR"}, f"could not check folder: {exc}")
+            return {"CANCELLED"}
+
+        if collision:
+            try:
+                bpy.ops.omni.confirm_new_file_overwrite(
+                    "INVOKE_DEFAULT",
+                    target_url=target_url,
+                )
+            except Exception as exc:
+                self.report({"ERROR"}, f"could not open confirm dialog: {exc}")
+                return {"CANCELLED"}
+            return {"FINISHED"}
+
+        return _kick_off_new_upload(self, target_url)
+
+
+class OMNI_OT_ConfirmNewFileOverwrite(Operator):
+    """Confirmation dialog shown when 'New' targets a file that already exists."""
+    bl_idname = "omni.confirm_new_file_overwrite"
+    bl_label = "Overwrite existing file?"
+
+    target_url: StringProperty(default="", options={"HIDDEN", "SKIP_SAVE"})
+
+    def invoke(self, context, event):
+        return context.window_manager.invoke_props_dialog(self, width=480)
+
+    def draw(self, context):
+        col = self.layout.column()
+        col.label(text="A file with this name already exists on the server:", icon="ERROR")
+        col.label(text=f"   {self.target_url}")
+        col.separator()
+        col.label(text="OK = overwrite (a Nucleus checkpoint will record the change)")
+        col.label(text="Cancel = keep the existing file untouched")
+
+    def execute(self, context):
+        return _kick_off_new_upload(self, self.target_url)
 
 
 class OMNI_OT_ClearSourceUrl(Operator):

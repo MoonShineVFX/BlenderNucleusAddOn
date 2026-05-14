@@ -112,6 +112,7 @@ class OMNI_PT_BrowserPanel(bpy.types.Panel):
         save_op.use_source_url = True
         save_as_op = row.operator("omni.export_usd", text="Save As…", icon="FILE_NEW")
         save_as_op.use_source_url = False
+        row.operator("omni.new_file", text="New", icon="FILE_TICK")
 
         if settings.source_url:
             box = col.box()
