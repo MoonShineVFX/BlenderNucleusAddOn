@@ -22,7 +22,7 @@
 - **Save (6)** : 將Blender修改後的USD檔推回Server
 - **Save As (7)** : 將USD檔另存至Server的其他位址
 - **New (8)** : 在Server上新增尚未存在的USD檔
-- **Checkpoint (9)(optional)** : 將檔案推回server時，提交修改的comment
+- **Checkpoint (9)(optional)** : 將檔案推回Server的同時，提交修改的comment
 
 <img width="466" height="777" alt="Panel" src="https://github.com/user-attachments/assets/21a89fec-b2c9-49a3-8781-3a287d9dff89" />
 
