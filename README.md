@@ -16,7 +16,7 @@
 
 ## 使用
 - **Connections (1)**: 點選加號新增Nucleus Server路徑 (ex: omniverse://nucleus.moonshine.tw/)
-- **Bookmarks (2)** : 儲存Blender檔後，可自動儲存Nucleus Server位址
+- **Bookmarks (2)** : 點擊連結並按下Bookmark按鈕，可將該連結存至Bookmarks。下次開啟新Blender專案時，Bookmark仍會存在
 - **Directory (3)** : 瀏覽Nucleus Server上的資料夾
 - **Files (4)** : 選取想要開啟的USD檔
 - **Open (5)** : 從Server上拉取檔案至Blender
