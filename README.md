@@ -18,12 +18,13 @@
 - **Bookmarks (2)** : 點擊路徑並按下Bookmark按鈕，可將該連結存至Bookmarks。下次開啟新Blender專案時，Bookmark仍會存在。點擊路徑並按下X按鈕，可將路徑從Bookmarks中移除
 - **Directory (3)** : 瀏覽Nucleus Server上的資料夾
 - **Files (4)** : 選取想要開啟的USD檔
-- **Open (5)** : 從Server上拉取檔案至Blender
-- **Save (6)** : 將修改後的USD推回Server
+- **Open (5)** : 從Server上拉取已存在的USD檔案至Blender
+- **Save (6)** : 將Blender修改後的USD檔推回Server
 - **Save As (7)** : 將USD檔另存至Server的其他位址
-- **Checkpoint (8)(optional)** : 將檔案推回server時，提交修改的comment
+- **New (8)** : 在Server上新增尚未存在的USD檔
+- **Checkpoint (9)(optional)** : 將檔案推回server時，提交修改的comment
 
-<img width="378" height="721" alt="Panel" src="https://github.com/user-attachments/assets/ab76ca1e-e42c-4eaf-9905-914615956a11" />
+<img width="466" height="777" alt="Panel" src="https://github.com/user-attachments/assets/21a89fec-b2c9-49a3-8781-3a287d9dff89" />
 
 
 ## 材質轉換
